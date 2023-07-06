@@ -17,7 +17,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <TouchableOpacity
-      className="bg-BRAND_MID flex-1 max-h-[56px] min-h-[56px]  rounded-md flex justify-center items-center p-4 w-full"
+      className="bg-BRAND_MID flex-1 max-h-[56px] min-h-[56px] rounded-md flex justify-center items-center p-4 w-full"
       disabled={isLoading}
       {...rest}
     >
