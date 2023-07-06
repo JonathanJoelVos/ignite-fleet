@@ -12,6 +12,7 @@ import { ANDROID_CLIENT_ID, RELM_ID_APPLICATION } from '@env'
 import { AppProvider, UserProvider } from '@realm/react'
 import { Routes } from './src/routes'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { RealmProvider } from './src/libs/realm'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,7 +35,9 @@ export default function App() {
           translucent
         />
         <UserProvider fallback={SignIn}>
-          <Routes />
+          <RealmProvider>
+            <Routes />
+          </RealmProvider>
         </UserProvider>
       </SafeAreaProvider>
     </AppProvider>
